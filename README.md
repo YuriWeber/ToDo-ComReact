@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +69,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+# ToDo-ComReact
+
+Refazendo o site de To Do lists com react e agora com um conhecimento mais amplo de html, css e organização de arquivos.
+
+## Estado Atual
+
+>>>>>>> 78dd763a95a70d6157cc97d9d83325787d5a5fe5
