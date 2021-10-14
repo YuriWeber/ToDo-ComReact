@@ -1,0 +1,56 @@
+@import "var.css";
+
+html * {
+  font-family: "Bitter", serif;
+}
+
+.header {
+  background-color: rgb(var(--dark));
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-height: 10vh;
+  min-height: 30px;
+}
+
+.header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: rgb(var(--light-v2));
+  margin-left: 20px;
+}
+
+.header-buttons {
+  margin-right: 20px;
+}
+
+.header-buttons button {
+  color: rgb(var(--semi-white));
+  background-color: rgb(var(--light-dark));
+  padding: 10px;
+  margin-left: 2.5vw;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 500ms;
+}
+
+.header-buttons button:hover {
+  background-color: rgb(var(--light-dark-hover));
+}
+
+.header-buttons button:active {
+  transform: scale(0.9);
+}
+
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+  .header-buttons button {
+    font-size: 1rem;
+    padding: 5px;
+  }
+}

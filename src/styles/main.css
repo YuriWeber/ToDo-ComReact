@@ -1,0 +1,10 @@
+@import "var.css";
+
+#root {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(var(--light-dark));
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+}

@@ -1,0 +1,9 @@
+@import "var.css";
+
+.blocks-container {
+  margin-top: 10px;
+  width: 90vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}

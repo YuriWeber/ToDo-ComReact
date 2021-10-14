@@ -1,0 +1,74 @@
+@import "var.css";
+
+textarea {
+  border: none;
+  outline: none;
+  overflow: hidden;
+  resize: none;
+
+  border-radius: 5px;
+  width: 100vw;
+}
+
+.block {
+  background-color: rgba(var(--light-v2), 0.9);
+  border: none;
+  border-radius: 5px;
+}
+
+.block-header {
+  background-color: rgb(var(--light-v1));
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+}
+
+.block-title {
+  background-color: transparent;
+  color: rgb(var(--dark));
+  font-size: 1.5rem;
+  font-weight: bold;
+  height: 48px;
+  padding: 5px 0 3px 5px;
+}
+
+.block-delete {
+  color: rgb(var(--dark));
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.block-delete:hover {
+  color: rgb(var(--light-dark-hover));
+}
+
+.block-content {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+.todo-text {
+  color: rgb(var(--semi-white));
+  background-color: rgba(var(--dark), 0.5);
+}
+
+.todo-delete {
+  margin-left: 20px;
+  color: rgb(var(--dark));
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.todo-delete:hover {
+  color: rgb(var(--light-dark-hover));
+}
