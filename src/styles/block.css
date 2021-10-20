@@ -14,6 +14,7 @@ textarea {
   background-color: rgba(var(--light-v2), 0.9);
   border: none;
   border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 .block-header {
@@ -46,6 +47,7 @@ textarea {
 
 .block-content {
   margin: 10px;
+  margin-bottom: 0;
   display: flex;
   flex-direction: column;
 }
@@ -59,11 +61,11 @@ textarea {
 
 .todo-text {
   color: rgb(var(--semi-white));
-  background-color: rgba(var(--dark), 0.5);
+  background-color: rgba(var(--dark), 0.4);
 }
 
 .todo-delete {
-  margin-left: 20px;
+  margin-left: 10px;
   color: rgb(var(--dark));
   cursor: pointer;
   transition: all 300ms;
@@ -71,4 +73,58 @@ textarea {
 
 .todo-delete:hover {
   color: rgb(var(--light-dark-hover));
+}
+
+.todo-check {
+  appearance: none;
+  background-color: rgba(var(--dark), 0.4);
+  width: 27px;
+  height: 20px;
+  position: relative;
+  margin-right: 5px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 500ms;
+}
+
+.todo-check::before {
+  content: "";
+  margin-bottom: 5px;
+  width: 25%;
+  height: 50%;
+  border-right: 3px solid rgb(var(--dark));
+  border-bottom: 3px solid rgb(var(--dark));
+  transform: rotate(45deg);
+  opacity: 0;
+}
+
+.todo-check:checked::before {
+  opacity: 1;
+}
+
+.todo-check:hover {
+  background-color: rgba(var(--dark), 0.6);
+}
+
+.new-todo {
+  color: rgb(var(--semi-white));
+  background-color: rgb(var(--light-dark));
+  align-self: center;
+  margin-bottom: 10px;
+  padding: 5px 20px 5px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 500ms;
+}
+
+.new-todo:hover {
+  background-color: rgb(var(--light-dark-hover));
+}
+
+.new-todo:active {
+  transform: scale(0.9);
 }
