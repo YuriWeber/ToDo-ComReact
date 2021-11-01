@@ -66,7 +66,7 @@ textarea {
 
 .todo-delete {
   margin-left: 10px;
-  color: rgb(var(--dark));
+  color: rgba(var(--dark), 0.8);
   cursor: pointer;
   transition: all 300ms;
 }

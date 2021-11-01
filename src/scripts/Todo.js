@@ -1,7 +1,16 @@
 import resize from "./utility/resize.js"
+import { FaTrash } from "react-icons/fa";
+import { useState, useEffect } from 'react'
 
-export default function Todo({todo, updateCheckData, updateTextData}) {
+export default function Todo({todo, updateCheckData, updateTextData, deleteTodo}) {
+    // alterar o tamanho da textArea ao carregar a pagina
+    const [scrollHeight, setScrollHeight] = useState(0)
+    useEffect(() => {
+        setScrollHeight(document.querySelector(`#todo${todo.id} textarea`).scrollHeight)
+    },[])
+
     function checkBox(event) {
+        // altera a opacidade do elemento referente ao estado da checkbox
         const parent = event.parentElement
         if (event.checked) {
             parent.style.opacity = 0.5
@@ -12,7 +21,8 @@ export default function Todo({todo, updateCheckData, updateTextData}) {
     }
 
     return (
-        <div className="todo-content" style={todo.check ? {opacity:0.5} : {opacity:1}}>
+        <div className="todo-content" style={todo.check ? {opacity:0.5} : {opacity:1}}
+            id={`todo${todo.id}`}>
             <input 
                 type="checkbox" 
                 className="todo-check" 
@@ -23,12 +33,14 @@ export default function Todo({todo, updateCheckData, updateTextData}) {
                 className="todo-text" 
                 rows="1"
                 maxLength="300"
-                defaultValue={todo.text} 
+                defaultValue={todo.text}
                 spellCheck="false"
-                onChange={event => {resize(event, '16px'); 
-                                    updateTextData(todo.id, event.target.value)}}>
+                onChange={event => {resize(event, 1*6);
+                                    updateTextData(todo.id, event.target.value)}}
+                style={{height: `${scrollHeight-4}px`}}
+                >
             </textarea>
-            <h2 className="todo-delete">X</h2>
+            <h2 className="todo-delete" onClick={() => deleteTodo(todo.id)}><FaTrash /></h2>
         </div>
     )
 }
