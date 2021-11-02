@@ -19,16 +19,18 @@ html * {
   font-weight: bold;
   color: rgb(var(--light-v2));
   margin-left: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .header h2 {
-  position: absolute;
-  left: 30%;
+  opacity: 0;
   font-size: 3rem;
   font-weight: bold;
-  color: red;
-  margin-left: 20px;
-  opacity: 0;
+  color: rgb(var(--light-v2));
+}
+
+.header h2:hover {
 }
 
 .header-buttons {
