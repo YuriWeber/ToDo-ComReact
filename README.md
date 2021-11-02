@@ -1,7 +1,7 @@
 
 # ToDo-ComReact
 
-Sistema de To Do lists dividi em blocos. Feito com conhecimentos básicos de react.
+Sistema de To Do lists dividi em blocos. Feito com conhecimentos básicos de react.\
 Não há backend e até o momento tudo é salvo no localStorage.
 
 ![image](https://user-images.githubusercontent.com/87040048/139862667-47a161ee-b5d5-41b7-9837-466050ec7078.png)
