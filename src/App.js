@@ -21,7 +21,6 @@ function App() {
     unsaved().style.opacity = 0
     
     const newData = JSON.parse(storage)
-    // const newData = [{title: "aasas", todo: [{text: "aaaaa", check: false, id: 1}], id: 12}]
     setData(newData)
   }, [])
   
@@ -51,6 +50,7 @@ function App() {
   return (
     <>
       <Header localSave={localSave} createBlock={createBlock}/>
+      
       <Blocks data={data} setData={setData}/>
     </>
   );

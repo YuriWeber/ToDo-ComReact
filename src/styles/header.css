@@ -14,6 +14,10 @@ html * {
   min-height: 30px;
 }
 
+.title {
+  display: flex;
+}
+
 .header h1 {
   font-size: 3rem;
   font-weight: bold;
@@ -28,9 +32,6 @@ html * {
   font-size: 3rem;
   font-weight: bold;
   color: rgb(var(--light-v2));
-}
-
-.header h2:hover {
 }
 
 .header-buttons {

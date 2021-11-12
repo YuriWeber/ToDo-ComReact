@@ -1,7 +1,6 @@
 import Block from "./Block.js"
 
 export default function Blocks({data, setData}) {
-
     return (
         <section className="blocks-container">
             {data.map(block => (
