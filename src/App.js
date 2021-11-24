@@ -7,6 +7,7 @@ function App() {
   const [data, setData] = useState([])
   // tentei definir direto mas retorna um erro ao ser usado 
   const unsaved = function() {return document.querySelector(".header .unsaved")}
+  
   // utilizando 2 TEMPORARIAMENTE
   // por algum motivo o useEffect do data ativa duas vezes ao carregar o site
   const firstUpdate = useRef(2)
