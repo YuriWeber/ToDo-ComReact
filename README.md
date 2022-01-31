@@ -1,8 +1,6 @@
 
 # ToDo-ComReact
 
-https://yuriweber.github.io/todocomreact/
-
 Sistema de To Do lists dividi em blocos. Feito com conhecimentos básicos de react.\
 Não há backend e até o momento tudo é salvo no localStorage.
 
