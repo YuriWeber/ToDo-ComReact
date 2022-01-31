@@ -62,6 +62,7 @@ textarea {
 .todo-text {
   color: rgb(var(--semi-white));
   background-color: rgba(var(--dark), 0.4);
+  padding-left: 4px;
 }
 
 .todo-delete {
