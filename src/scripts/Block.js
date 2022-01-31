@@ -1,15 +1,13 @@
 import Todo from "./Todo.js"
 import resize from "./utility/resize.js"
-import { useState, useEffect} from 'react'
+// import { useState, useEffect} from 'react'
 
 export default function Block({block, data, setData}) {
     // alterar o tamanho da textArea ao abrir a pagina
-    const [scrollHeight, setScrollHeight] = useState(0)
-    useEffect(() => {
-        setScrollHeight(document.querySelector(`#block${block.id} textArea`).scrollHeight)
-        // enquanto não resolvo erro de dependencia com o "block.id"
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+    // const [scrollHeight, setScrollHeight] = useState(0)
+    // useEffect(() => {
+    //     setScrollHeight(document.querySelector(`#block${block.id} textArea`).scrollHeight)
+    // }, [])
 
     // controla a opacidade do bloco
     // iria por um useEfect para o data, porem eles esta atualizando sozinha, não entendi como
@@ -102,7 +100,7 @@ export default function Block({block, data, setData}) {
                     maxLength="100"
                     onChange={event => {updateTitleData(event.target.value)
                                         resize(event, 48)}}
-                    style={{height: `${scrollHeight-12}px`}}
+                    // style={{height: `${scrollHeight-12}px`}}
                     >
                 </textarea>
                 <h2 className="block-delete" onClick={() => (deleteBlock(block.id))}>X</h2>
