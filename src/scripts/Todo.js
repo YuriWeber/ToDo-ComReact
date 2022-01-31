@@ -1,15 +1,13 @@
 import resize from "./utility/resize.js"
 import { FaTrash } from "react-icons/fa";
-import { useState, useEffect } from 'react'
+// import { useState, useEffect } from 'react'
 
 export default function Todo({todo, updateCheckData, updateTextData, deleteTodo}) {
     // alterar o tamanho da textArea ao carregar a pagina
-    const [scrollHeight, setScrollHeight] = useState(0)
-    useEffect(() => {
-        setScrollHeight(document.querySelector(`#todo${todo.id} textarea`).scrollHeight)
-        // enquanto não resolvo o aviso de dependencia do "todo.id"
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[])
+    // const [scrollHeight, setScrollHeight] = useState(0)
+    // useEffect(() => {
+    //     setScrollHeight(document.querySelector(`#todo${todo.id} textarea`).scrollHeight)
+    // },[])
 
     function checkBox(event) {
         // altera a opacidade do elemento referente ao estado da checkbox
@@ -37,9 +35,9 @@ export default function Todo({todo, updateCheckData, updateTextData, deleteTodo}
                 maxLength="300"
                 defaultValue={todo.text}
                 spellCheck="false"
-                onChange={event => {resize(event, 16);
+                onChange={event => {resize(event, 1*6);
                                     updateTextData(todo.id, event.target.value)}}
-                style={{height: `${scrollHeight-4}px`}}
+                // style={{height: `${scrollHeight-4}px`}}
                 >
             </textarea>
             <h2 className="todo-delete" onClick={() => deleteTodo(todo.id)}><FaTrash /></h2>
